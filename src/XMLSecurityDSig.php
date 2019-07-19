@@ -943,10 +943,10 @@ class XMLSecurityDSig
      * @param bool $isPEMFormat
      * @param bool $isURL
      * @param null|DOMXPath $xpath
-     * @param ["subjectName" => true]|array $options
+     * @param null|array $options
      * @throws Exception
      */
-    public static function staticAdd509Cert($parentRef, $cert, $isPEMFormat=true, $isURL=false, $xpath=null, $options=[ "subjectName" => true ])
+    public static function staticAdd509Cert($parentRef, $cert, $isPEMFormat=true, $isURL=false, $xpath=null, $options=null)
     {
         if ($isURL) {
             $cert = file_get_contents($cert);
@@ -1065,7 +1065,7 @@ class XMLSecurityDSig
      * @param null|array $options
      * @throws Exception
      */
-    public function add509Cert($cert, $isPEMFormat=true, $isURL=false, $options=null)
+    public function add509Cert($cert, $isPEMFormat=true, $isURL=false, $options=[ "subjectName" => true ])
     {
         if ($xpath = $this->getXPathObj()) {
             self::staticAdd509Cert($this->sigNode, $cert, $isPEMFormat, $isURL, $xpath, $options);
