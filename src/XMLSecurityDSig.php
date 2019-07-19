@@ -943,10 +943,10 @@ class XMLSecurityDSig
      * @param bool $isPEMFormat
      * @param bool $isURL
      * @param null|DOMXPath $xpath
-     * @param null|array $options
+     * @param ["subjectName" => true]|array $options
      * @throws Exception
      */
-    public static function staticAdd509Cert($parentRef, $cert, $isPEMFormat=true, $isURL=false, $xpath=null, $options=null)
+    public static function staticAdd509Cert($parentRef, $cert, $isPEMFormat=true, $isURL=false, $xpath=null, $options=[ "subjectName" => true ])
     {
         if ($isURL) {
             $cert = file_get_contents($cert);
