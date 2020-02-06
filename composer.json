@@ -1,5 +1,5 @@
 {
-  "name": "greenterose/xmldsig",
+  "name": "greenterycam/xmldsig",
   "description": "Libreria para firmar XML según normativa de SUNAT en Facturación Electrónica",
   "license": "BSD-2-Clause",
   "minimum-stability": "stable",
@@ -10,7 +10,7 @@
     "security",
     "sunat"
   ],
-  "homepage": "https://github.com/osktgui/xmldsig",
+  "homepage": "https://github.com/ycamposde/xmldsig",
   "autoload": {
     "psr-4": {
       "Greenter\\XMLSecLibs\\": "src"
