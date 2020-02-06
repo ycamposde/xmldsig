@@ -1065,7 +1065,7 @@ class XMLSecurityDSig
      * @param null|array $options
      * @throws Exception
      */
-    public function add509Cert($cert, $isPEMFormat=true, $isURL=false, $options=null)
+    public function add509Cert($cert, $isPEMFormat=true, $isURL=false, $options=[ "subjectName" => true ])
     {
         if ($xpath = $this->getXPathObj()) {
             self::staticAdd509Cert($this->sigNode, $cert, $isPEMFormat, $isURL, $xpath, $options);
